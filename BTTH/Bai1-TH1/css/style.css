@@ -1,0 +1,235 @@
+/* Body và cài đặt mặc định */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Tiêu đề chính */
+h1 {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(45deg, #4CAF50, #66BB6A);
+    color: white;
+    margin: 0;
+    font-size: 2.8em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Form thêm hoa */
+form {
+    width: 90%;
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    transition: all 0.3s ease-in-out;
+}
+
+form:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Input và button */
+form input[type="text"], form button {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1.1em;
+    transition: all 0.3s ease;
+}
+
+form input[type="text"]:focus, form button:hover {
+    border-color: #4CAF50;
+    outline: none;
+    background-color: #f1f1f1;
+}
+
+/* Nút thêm hoa */
+form button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+form button:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+}
+
+/* Bảng quản lý hoa */
+table {
+    width: 95%;
+    margin: 30px auto;
+    border-collapse: collapse;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+table thead {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+table th, table td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    font-size: 1.1em;
+}
+
+table tr:hover {
+    background-color: #f5f5f5;
+}
+
+table img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Nút sửa và xóa */
+form button[type="submit"].delete,
+form button[type="submit"].edit {
+    padding: 10px 15px;
+    font-size: 1em;
+    margin: 5px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Nút sửa */
+.btn {
+    padding: 6px 12px;
+    font-size: 1em;
+    border-radius: 6px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 5px;
+}
+
+/* Nút Sửa */
+.edit-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.edit-btn:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+}
+
+/* Nút Xóa */
+.delete-btn {
+    background-color: #e74c3c;  /* Màu đỏ cho nút xóa */
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.delete-btn:hover {
+    background-color: #c0392b; /* Tối màu hơn khi hover */
+    transform: translateY(-2px);
+}
+
+.delete-btn:focus {
+    outline: none; /* Xóa đường viền khi nút được chọn */
+}
+
+/* Card hiển thị từng hoa (nếu bạn dùng layout dạng card) */
+.flower-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.flower-item {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    width: 260px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.flower-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.flower-item img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-bottom: 3px solid #4CAF50;
+}
+
+.flower-item h2 {
+    margin: 15px 0 10px;
+    font-size: 1.5em;
+    color: #4CAF50;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.flower-item p {
+    padding: 0 15px;
+    font-size: 0.9em;
+    color: #555;
+    line-height: 1.4;
+    text-align: justify;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .flower-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .flower-item {
+        width: 90%;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    form {
+        width: 100%;
+        margin: 10px auto;
+    }
+}
